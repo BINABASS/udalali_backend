@@ -1,0 +1,10 @@
+Requirement already satisfied: setuptools in /home/binos/anaconda3/lib/python3.11/site-packages (80.0.0)
+Collecting setuptools
+  Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+Installing collected packages: setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 80.0.0
+    Uninstalling setuptools-80.0.0:
+      Successfully uninstalled setuptools-80.0.0
+Successfully installed setuptools-80.9.0
