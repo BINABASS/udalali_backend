@@ -1,177 +1,55 @@
-# core/views.py
-from rest_framework import generics, permissions, status, filters
+from rest_framework import viewsets, status, permissions
 from rest_framework.response import Response
-from django.contrib.auth import get_user_model
-from django_filters.rest_framework import DjangoFilterBackend
-from .models import Property, Subscription, Transaction
-from .serializers import (
-    UserSerializer,
-    UserRegistrationSerializer,
-    PropertySerializer,
-    PropertyCreateSerializer,
-    PropertyUpdateSerializer,
-    SubscriptionSerializer,
-    TransactionSerializer
-)
+from rest_framework.decorators import action
+from django.shortcuts import get_object_or_404
+from .models import Property, PropertyImage
+from .serializers import PropertySerializer, PropertyImageSerializer
 
-User = get_user_model()
-
-# ====================== User Views ======================
-class UserRegistrationView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserRegistrationSerializer
-    permission_classes = [permissions.AllowAny]
-
-class UserListView(generics.ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = [permissions.IsAdminUser]
-    filter_backends = [filters.SearchFilter]
-    search_fields = ['username', 'email', 'phone']
-
-class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_object(self):
-        if self.request.user.is_staff:
-            return super().get_object()
-        return self.request.user
-
-# ====================== Property Views ======================
-class PropertyListView(generics.ListAPIView):
-    serializer_class = PropertySerializer
-    permission_classes = [permissions.AllowAny]
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = {
-        'property_type': ['exact'],
-        'location': ['exact', 'icontains'],
-        'price': ['gte', 'lte'],
-        'is_available': ['exact']
-    }
-    search_fields = ['title', 'description', 'location']
-    ordering_fields = ['price', 'created_at']
-    ordering = ['-created_at']  # Default ordering
-
-    def get_queryset(self):
-        return Property.objects.filter(is_available=True)
-
-class PropertyCreateView(generics.CreateAPIView):
+class PropertyViewSet(viewsets.ModelViewSet):
     queryset = Property.objects.all()
-    serializer_class = PropertyCreateSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = PropertySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(seller=self.request.user)
 
-class PropertyDetailView(generics.RetrieveAPIView):
-    queryset = Property.objects.all()
-    serializer_class = PropertySerializer
-    permission_classes = [permissions.AllowAny]
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if not self.request.user.is_staff:
+            queryset = queryset.filter(is_available=True)
+        return queryset
 
-class PropertyUpdateView(generics.UpdateAPIView):
-    queryset = Property.objects.all()
-    serializer_class = PropertyUpdateSerializer
+    @action(detail=True, methods=['post'], permission_classes=[permissions.IsAuthenticated])
+    def set_primary_image(self, request, pk=None):
+        property = self.get_object()
+        image_id = request.data.get('image_id')
+        if not image_id:
+            return Response({'error': 'image_id is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        try:
+            image = property.images.get(id=image_id)
+        except PropertyImage.DoesNotExist:
+            return Response({'error': 'Image not found'}, status=status.HTTP_404_NOT_FOUND)
+        
+        # Set all images to not primary first
+        property.images.all().update(is_primary=False)
+        # Set the selected image as primary
+        image.is_primary = True
+        image.save()
+        
+        return Response({'status': 'primary image set'})
+
+class PropertyImageViewSet(viewsets.ModelViewSet):
+    serializer_class = PropertyImageSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        if self.request.user.is_staff:
-            return Property.objects.all()
-        return Property.objects.filter(seller=self.request.user)
-
-class PropertyDeleteView(generics.DestroyAPIView):
-    queryset = Property.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        if self.request.user.is_staff:
-            return Property.objects.all()
-        return Property.objects.filter(seller=self.request.user)
-
-# ====================== Subscription Views ======================
-class SubscriptionListView(generics.ListCreateAPIView):
-    serializer_class = SubscriptionSerializer
-    permission_classes = [permissions.IsAuthenticated]
-    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
-    filterset_fields = ['plan_name', 'is_active']
-    ordering_fields = ['start_date', 'end_date']
-    ordering = ['-start_date']
-
-    def get_queryset(self):
-        if self.request.user.is_staff:
-            return Subscription.objects.all()
-        return Subscription.objects.filter(seller=self.request.user)
+        return PropertyImage.objects.filter(property_id=self.kwargs['property_pk'])
 
     def perform_create(self, serializer):
-        if self.request.user.user_type != 'SELLER':
-            return Response(
-                {"detail": "Only sellers can create subscriptions"},
-                status=status.HTTP_403_FORBIDDEN
-            )
-        serializer.save(seller=self.request.user)
+        property = get_object_or_404(Property, pk=self.kwargs['property_pk'])
+        if property.seller != self.request.user:
+            self.permission_denied(self.request)
+        serializer.save(property=property)
 
-class SubscriptionDetailView(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = SubscriptionSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        if self.request.user.is_staff:
-            return Subscription.objects.all()
-        return Subscription.objects.filter(seller=self.request.user)
-
-# ====================== Transaction Views ======================
-class TransactionListView(generics.ListCreateAPIView):
-    serializer_class = TransactionSerializer
-    permission_classes = [permissions.IsAuthenticated]
-    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
-    filterset_fields = ['status', 'property__property_type']
-    ordering_fields = ['transaction_date', 'amount']
-    ordering = ['-transaction_date']
-
-    def get_queryset(self):
-        if self.request.user.is_staff:
-            return Transaction.objects.all()
-        return Transaction.objects.filter(buyer=self.request.user)
-
-    def perform_create(self, serializer):
-        property_obj = serializer.validated_data['property']
-        
-        if not property_obj.is_available:
-            return Response(
-                {"detail": "This property is not available for purchase"},
-                status=status.HTTP_400_BAD_REQUEST
-            )
-        
-        if property_obj.seller == self.request.user:
-            return Response(
-                {"detail": "You cannot buy your own property"},
-                status=status.HTTP_400_BAD_REQUEST
-            )
-        
-        transaction = serializer.save(
-            buyer=self.request.user,
-            amount=property_obj.price,
-            status='PENDING'
-        )
-        
-        property_obj.is_available = False
-        property_obj.save()
-
-class TransactionDetailView(generics.RetrieveUpdateAPIView):
-    serializer_class = TransactionSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        if self.request.user.is_staff:
-            return Transaction.objects.all()
-        return Transaction.objects.filter(buyer=self.request.user)
-
-    def perform_update(self, serializer):
-        allowed_fields = {'payment_reference', 'status'}
-        if set(serializer.validated_data.keys()) - allowed_fields:
-            return Response(
-                {"detail": "You can only update payment reference and status"},
-                status=status.HTTP_400_BAD_REQUEST
-            )
-        serializer.save()
+# Add any other view classes you had before

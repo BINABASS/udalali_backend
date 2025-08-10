@@ -1,78 +1,23 @@
-from django.urls import path
-from .views import (
-    UserRegistrationView,
-    UserListView,
-    UserDetailView,
-    PropertyListView,
-    PropertyCreateView,
-    PropertyDetailView,
-    PropertyUpdateView,
-    PropertyDeleteView,
-    SubscriptionListView,
-    SubscriptionDetailView,
-    TransactionListView,
-    TransactionDetailView
-)
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+
+router = DefaultRouter()
+router.register(r'properties', views.PropertyViewSet, basename='property')
+# This creates the following URLs:
+# GET /properties/ - List all properties
+# POST /properties/ - Create new property
+# GET /properties/{id}/ - Get property details
+# PUT /properties/{id}/ - Update property
+# DELETE /properties/{id}/ - Delete property
+# POST /properties/{id}/set_primary_image/ - Set primary image
+
+# Nested router for property images
+property_router = DefaultRouter()
+property_router.register(r'images', views.PropertyImageViewSet, basename='property-image')
 
 urlpatterns = [
-    # Users
-    path('users/register/', UserRegistrationView.as_view(), name='user-register'),
-    path('users/', UserListView.as_view(), name='user-list'),
-    path('users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
-    
-    # Properties
-    path('properties/', PropertyListView.as_view(), name='property-list'),
-    path('properties/create/', PropertyCreateView.as_view(), name='property-create'),
-    path('properties/<int:pk>/', PropertyDetailView.as_view(), name='property-detail'),
-    path('properties/<int:pk>/update/', PropertyUpdateView.as_view(), name='property-update'),
-    path('properties/<int:pk>/delete/', PropertyDeleteView.as_view(), name='property-delete'),
-    
-    # Subscriptions
-    path('subscriptions/', SubscriptionListView.as_view(), name='subscription-list'),
-    path('subscriptions/<int:pk>/', SubscriptionDetailView.as_view(), name='subscription-detail'),
-    
-    # Transactions
-    path('transactions/', TransactionListView.as_view(), name='transaction-list'),
-    path('transactions/<int:pk>/', TransactionDetailView.as_view(), name='transaction-detail'),
+    path('', include(router.urls)),
+    path('properties/<int:property_pk>/', include(property_router.urls)),
+    # Add other URL patterns as needed
 ]
-
-
-
-
-# from django.urls import path
-# from .views import (
-#     UserRegistrationView,
-#     UserListView,
-#     UserDetailView,
-#     PropertyListView,
-#     PropertyCreateView,
-#     PropertyDetailView,
-#     PropertyUpdateView,
-#     PropertyDeleteView,
-#     SubscriptionListView,
-#     SubscriptionDetailView,
-#     TransactionListView,
-#     TransactionDetailView
-# )
-
-# urlpatterns = [
-#     # User endpoints
-#     path('users/register/', UserRegistrationView.as_view(), name='user-register'),
-#     path('users/', UserListView.as_view(), name='user-list'),
-#     path('users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
-    
-#     # Property endpoints
-#     path('properties/', PropertyListView.as_view(), name='property-list'),
-#     path('properties/create/', PropertyCreateView.as_view(), name='property-create'),
-#     path('properties/<int:pk>/', PropertyDetailView.as_view(), name='property-detail'),
-#     path('properties/<int:pk>/update/', PropertyUpdateView.as_view(), name='property-update'),
-#     path('properties/<int:pk>/delete/', PropertyDeleteView.as_view(), name='property-delete'),
-    
-#     # Subscription endpoints
-#     path('subscriptions/', SubscriptionListView.as_view(), name='subscription-list'),
-#     path('subscriptions/<int:pk>/', SubscriptionDetailView.as_view(), name='subscription-detail'),
-    
-#     # Transaction endpoints
-#     path('transactions/', TransactionListView.as_view(), name='transaction-list'),
-#     path('transactions/<int:pk>/', TransactionDetailView.as_view(), name='transaction-detail'),
-# ]
