@@ -2,6 +2,7 @@ import uuid
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 class User(AbstractUser):
     USER_TYPE_CHOICES = (
@@ -123,55 +124,33 @@ class PropertyImage(models.Model):
             ).exclude(pk=self.pk).update(is_primary=False)
         super().save(*args, **kwargs)
 
-class Subscription(models.Model):
-    user = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='subscriptions'
-    )
-    property = models.ForeignKey(
-        Property,
-        on_delete=models.CASCADE,
-        related_name='subscriptions'
-    )
-    notify_on_updates = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        unique_together = ('user', 'property')
-        ordering = ['-created_at']
-
-class Transaction(models.Model):
+class Booking(models.Model):
     STATUS_CHOICES = (
         ('PENDING', 'Pending'),
-        ('COMPLETED', 'Completed'),
+        ('CONFIRMED', 'Confirmed'),
         ('CANCELLED', 'Cancelled'),
-        ('FAILED', 'Failed'),
+        ('COMPLETED', 'Completed'),
     )
 
     property = models.ForeignKey(
         Property,
         on_delete=models.PROTECT,
-        related_name='transactions'
+        related_name='bookings'
     )
-    buyer = models.ForeignKey(
+    user = models.ForeignKey(
         User,
         on_delete=models.PROTECT,
-        related_name='purchases'
+        related_name='bookings'
     )
-    seller = models.ForeignKey(
-        User,
-        on_delete=models.PROTECT,
-        related_name='sales'
-    )
-    amount = models.DecimalField(max_digits=12, decimal_places=2)
+    start_date = models.DateField()
+    end_date = models.DateField()
     status = models.CharField(
         max_length=20,
         choices=STATUS_CHOICES,
         default='PENDING'
     )
-    payment_reference = models.CharField(max_length=100, blank=True)
+    total_price = models.DecimalField(max_digits=12, decimal_places=2)
+    notes = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -179,7 +158,130 @@ class Transaction(models.Model):
         ordering = ['-created_at']
         indexes = [
             models.Index(fields=['status']),
-            models.Index(fields=['buyer']),
-            models.Index(fields=['seller']),
+            models.Index(fields=['user']),
+            models.Index(fields=['property']),
+            models.Index(fields=['start_date', 'end_date']),
+        ]
+
+    def __str__(self):
+        return f"Booking {self.id} - {self.property.title} by {self.user.username}"
+
+
+class Message(models.Model):
+    MESSAGE_TYPES = (
+        ('INQUIRY', 'Inquiry'),
+        ('RESPONSE', 'Response'),
+        ('GENERAL', 'General'),
+    )
+
+    sender = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='sent_messages'
+    )
+    recipient = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='received_messages'
+    )
+    property = models.ForeignKey(
+        Property,
+        on_delete=models.CASCADE,
+        related_name='messages',
+        null=True,
+        blank=True
+    )
+    message_type = models.CharField(
+        max_length=20,
+        choices=MESSAGE_TYPES,
+        default='GENERAL'
+    )
+    subject = models.CharField(max_length=200)
+    content = models.TextField()
+    is_read = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['sender']),
+            models.Index(fields=['recipient']),
+            models.Index(fields=['is_read']),
             models.Index(fields=['created_at']),
         ]
+
+    def __str__(self):
+        return f"{self.get_message_type_display()} from {self.sender.username} to {self.recipient.username}"
+
+
+class Report(models.Model):
+    REPORT_TYPES = (
+        ('PROPERTY', 'Property Report'),
+        ('USER', 'User Report'),
+        ('SYSTEM', 'System Report'),
+        ('FINANCIAL', 'Financial Report'),
+    )
+
+    REPORT_STATUS = (
+        ('PENDING', 'Pending'),
+        ('IN_PROGRESS', 'In Progress'),
+        ('RESOLVED', 'Resolved'),
+        ('DISMISSED', 'Dismissed'),
+    )
+
+    report_type = models.CharField(
+        max_length=20,
+        choices=REPORT_TYPES,
+        default='PROPERTY'
+    )
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    reported_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name='reports_submitted'
+    )
+    reported_user = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='reports_against'
+    )
+    reported_property = models.ForeignKey(
+        Property,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='reports'
+    )
+    status = models.CharField(
+        max_length=20,
+        choices=REPORT_STATUS,
+        default='PENDING'
+    )
+    resolution_notes = models.TextField(blank=True, null=True)
+    resolved_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='reports_resolved'
+    )
+    resolved_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['report_type']),
+            models.Index(fields=['status']),
+            models.Index(fields=['reported_by']),
+            models.Index(fields=['created_at']),
+        ]
+
+    def __str__(self):
+        return f"{self.get_report_type_display()} - {self.title} ({self.get_status_display()})"

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
-from .models import Property, Subscription, Transaction, PropertyImage
+from .models import Property, PropertyImage, Booking, Message, Report
 
 User = get_user_model()
 
@@ -17,19 +17,31 @@ class PropertyAdmin(admin.ModelAdmin):
     inlines = [PropertyImageInline]
     readonly_fields = ['created_at', 'updated_at']
 
-@admin.register(Subscription)
-class SubscriptionAdmin(admin.ModelAdmin):
-    list_display = ['user', 'property', 'notify_on_updates', 'created_at']
-    list_filter = ['notify_on_updates']
-    search_fields = ['user__username', 'property__title']
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ['id', 'property', 'user', 'start_date', 'end_date', 'status', 'total_price', 'created_at']
+    list_filter = ['status', 'start_date', 'end_date']
+    search_fields = ['property__title', 'user__username', 'notes']
     readonly_fields = ['created_at', 'updated_at']
+    date_hierarchy = 'start_date'
 
-@admin.register(Transaction)
-class TransactionAdmin(admin.ModelAdmin):
-    list_display = ['id', 'property', 'buyer', 'seller', 'amount', 'status', 'created_at']
-    list_filter = ['status']
-    search_fields = ['buyer__username', 'seller__username', 'property__title']
+@admin.register(Message)
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ['id', 'subject', 'sender', 'recipient', 'message_type', 'is_read', 'created_at']
+    list_filter = ['message_type', 'is_read']
+    search_fields = ['subject', 'content', 'sender__username', 'recipient__username']
     readonly_fields = ['created_at', 'updated_at']
+    date_hierarchy = 'created_at'
+    raw_id_fields = ['sender', 'recipient', 'property']
+
+@admin.register(Report)
+class ReportAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'report_type', 'status', 'reported_by', 'created_at']
+    list_filter = ['report_type', 'status', 'created_at']
+    search_fields = ['title', 'description', 'reported_by__username']
+    readonly_fields = ['created_at', 'updated_at', 'resolved_at']
+    date_hierarchy = 'created_at'
+    raw_id_fields = ['reported_by', 'reported_user', 'reported_property', 'resolved_by']
 
 @admin.register(PropertyImage)
 class PropertyImageAdmin(admin.ModelAdmin):
