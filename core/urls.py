@@ -1,6 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from . import views
+from .views import current_user
 
 router = DefaultRouter()
 
@@ -51,5 +52,5 @@ router.register(r'reports', views.ReportViewSet, basename='report')
 urlpatterns = [
     path('', include(router.urls)),
     path('properties/<int:property_pk>/', include(property_router.urls)),
-    # Add other URL patterns as needed
-]
+    path('users/me/', current_user, name='current-user'),
+]    # Add other URL patterns as needed

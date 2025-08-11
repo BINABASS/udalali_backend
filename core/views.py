@@ -4,11 +4,13 @@ from rest_framework.decorators import action
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.db.models import Q
-from .models import Property, PropertyImage, Booking, Message, Report
+from .models import User, Property, PropertyImage, Booking, Message, Report
 from .serializers import (
     PropertySerializer, PropertyImageSerializer,
-    BookingSerializer, MessageSerializer, ReportSerializer
+    BookingSerializer, MessageSerializer, ReportSerializer, UserSerializer
 )
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 
 class PropertyViewSet(viewsets.ModelViewSet):
     queryset = Property.objects.all()
@@ -157,3 +159,13 @@ class ReportViewSet(viewsets.ModelViewSet):
         report.resolved_at = timezone.now()
         report.save()
         return Response({'status': 'report resolved'})
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def current_user(request):
+    """
+    Get the current authenticated user's data
+    """
+    serializer = UserSerializer(request.user)
+    return Response(serializer.data)

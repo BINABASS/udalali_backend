@@ -7,23 +7,38 @@ User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
     role = serializers.SerializerMethodField()
+    user_type = serializers.ChoiceField(choices=User.USER_TYPE_CHOICES, required=False)
     
     class Meta:
         model = User
         fields = [
             'id', 'username', 'email', 'first_name', 'last_name',
-            'phone', 'user_type', 'role', 'is_verified', 'date_joined'
+            'phone', 'user_type', 'role', 'is_verified', 'date_joined',
+            'is_staff', 'is_superuser', 'last_login'
         ]
-        read_only_fields = ['date_joined', 'is_verified']
+        read_only_fields = ['date_joined', 'is_verified', 'last_login']
         extra_kwargs = {
             'password': {'write_only': True},
         }
 
     def get_role(self, obj):
-        return obj.user_type.lower()
+        # Return the user_type in lowercase for frontend compatibility
+        return obj.user_type.lower() if obj.user_type else 'customer'
+
+    def to_representation(self, instance):
+        # Ensure consistent output format
+        representation = super().to_representation(instance)
+        # Make sure role is always included and matches user_type
+        representation['role'] = self.get_role(instance)
+        return representation
 
     def create(self, validated_data):
-        user = User.objects.create_user(**validated_data)
+        # Handle user creation with proper defaults
+        user_type = validated_data.get('user_type', User.USER_TYPE_CHOICES[0][0])
+        user = User.objects.create_user(
+            **validated_data,
+            user_type=user_type
+        )
         return user
 
 class PropertySerializer(serializers.ModelSerializer):
