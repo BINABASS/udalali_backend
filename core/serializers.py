@@ -80,12 +80,55 @@ class BookingSerializer(serializers.ModelSerializer):
             'start_date', 'end_date', 'status', 'total_price', 'notes',
             'created_at', 'updated_at'
         ]
-        read_only_fields = ['created_at', 'updated_at']
+        read_only_fields = ['created_at', 'updated_at', 'user', 'status']
 
     def validate(self, data):
-        if data['end_date'] <= data['start_date']:
-            raise serializers.ValidationError("End date must be after start date.")
+        # Check if end date is after start date
+        if 'end_date' in data and 'start_date' in data:
+            if data['end_date'] <= data['start_date']:
+                raise serializers.ValidationError({
+                    'end_date': 'End date must be after start date.'
+                })
+
+        # Check property availability for the selected dates
+        if 'property' in data and 'start_date' in data and 'end_date' in data:
+            property = data['property']
+            start_date = data['start_date']
+            end_date = data['end_date']
+            
+            # Check for overlapping bookings
+            overlapping_bookings = Booking.objects.filter(
+                property=property,
+                status__in=['PENDING', 'CONFIRMED'],
+                start_date__lte=end_date,
+                end_date__gte=start_date
+            )
+            
+            # If updating an existing booking, exclude it from the overlap check
+            if self.instance:
+                overlapping_bookings = overlapping_bookings.exclude(pk=self.instance.pk)
+            
+            if overlapping_bookings.exists():
+                raise serializers.ValidationError({
+                    'non_field_errors': ['The property is already booked for the selected dates.']
+                })
+        
         return data
+    
+    def create(self, validated_data):
+        # Set the current user as the booking user
+        validated_data['user'] = self.context['request'].user
+        
+        # Set default status to PENDING for new bookings
+        if 'status' not in validated_data:
+            validated_data['status'] = 'PENDING'
+            
+        # Calculate total price if not provided
+        if 'total_price' not in validated_data and 'property' in validated_data:
+            days = (validated_data['end_date'] - validated_data['start_date']).days + 1
+            validated_data['total_price'] = days * validated_data['property'].price
+            
+        return super().create(validated_data)
 
 
 class MessageSerializer(serializers.ModelSerializer):

@@ -68,10 +68,28 @@ class BookingViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = Booking.objects.all()
-        # Users can only see their own bookings unless they are staff
+        
+        # Filter by property if provided
+        property_id = self.request.query_params.get('property')
+        if property_id:
+            queryset = queryset.filter(property_id=property_id)
+            
+        # Filter by status if provided
+        status_param = self.request.query_params.get('status')
+        if status_param:
+            queryset = queryset.filter(status=status_param.upper())
+        
+        # Users can see:
+        # 1. Their own bookings
+        # 2. Bookings for properties they own (if they are sellers)
+        # 3. All bookings if staff
         if not self.request.user.is_staff:
-            queryset = queryset.filter(user=self.request.user)
-        return queryset
+            queryset = queryset.filter(
+                Q(user=self.request.user) |
+                Q(property__seller=self.request.user)
+            )
+            
+        return queryset.select_related('property', 'user')
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
