@@ -181,6 +181,13 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20
 }
 
+# Logging configuration
+try:
+    from .logging_config import LOGGING
+    print("Logging configuration loaded successfully")
+except Exception as e:
+    print(f"Error loading logging config: {e}")
+
 # JWT Settings
 from datetime import timedelta
 SIMPLE_JWT = {

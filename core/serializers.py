@@ -126,6 +126,7 @@ class BookingSerializer(serializers.ModelSerializer):
         # Calculate total price if not provided
         if 'total_price' not in validated_data and 'property' in validated_data:
             days = (validated_data['end_date'] - validated_data['start_date']).days + 1
+            # Use the property's price field (price per night)
             validated_data['total_price'] = days * validated_data['property'].price
             
         return super().create(validated_data)
