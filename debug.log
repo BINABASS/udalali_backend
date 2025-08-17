@@ -827,3 +827,714 @@ Exception: Authentication failed. Please try again.
 2025-08-16 15:01:53,581 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 339
 2025-08-16 15:01:53,717 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
 2025-08-16 15:01:53,770 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:02:37,355 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-16 15:03:28,699 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:03:28,757 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:03:30,204 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 339
+2025-08-16 15:03:30,236 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 339
+2025-08-16 15:03:30,258 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:03:30,337 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:05:21,981 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:05:22,047 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:05:26,444 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 339
+2025-08-16 15:05:26,465 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 339
+2025-08-16 15:05:26,492 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-16 15:05:26,575 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 3707
+2025-08-17 09:05:36,366 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 09:05:56,556 - django.request - WARNING - Not Found: /
+2025-08-17 09:05:56,557 - django.server - WARNING - "GET / HTTP/1.1" 404 3217
+2025-08-17 09:05:59,176 - django.request - WARNING - Not Found: /favicon.ico
+2025-08-17 09:05:59,177 - django.server - WARNING - "GET /favicon.ico HTTP/1.1" 404 3268
+2025-08-17 09:06:02,237 - django.server - INFO - "GET /admin/ HTTP/1.1" 200 10898
+2025-08-17 09:06:02,269 - django.server - INFO - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2025-08-17 09:06:02,271 - django.server - INFO - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2025-08-17 09:06:02,272 - django.server - INFO - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2025-08-17 09:06:02,696 - django.server - INFO - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2025-08-17 09:06:02,700 - django.server - INFO - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2025-08-17 09:06:02,701 - django.server - INFO - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+2025-08-17 09:06:02,703 - django.server - INFO - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2025-08-17 09:06:02,780 - django.server - INFO - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2025-08-17 09:06:02,783 - django.server - INFO - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2025-08-17 09:06:10,019 - django.server - INFO - "GET /admin/core/booking/ HTTP/1.1" 200 16729
+2025-08-17 09:06:10,070 - django.server - INFO - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2025-08-17 09:06:10,070 - django.server - INFO - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,079 - django.server - INFO - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,081 - django.server - INFO - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,083 - django.server - INFO - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,088 - django.server - INFO - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,085 - django.server - INFO - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,087 - django.server - INFO - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,094 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:06:10,095 - django.server - INFO - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,111 - django.server - INFO - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2025-08-17 09:06:10,217 - django.server - INFO - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+2025-08-17 09:06:10,240 - django.server - INFO - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2025-08-17 09:06:35,384 - django.server - INFO - "POST /admin/core/booking/ HTTP/1.1" 200 9519
+2025-08-17 09:06:40,240 - django.server - INFO - "POST /admin/core/booking/ HTTP/1.1" 302 0
+2025-08-17 09:06:40,280 - django.server - INFO - "GET /admin/core/booking/ HTTP/1.1" 200 10860
+2025-08-17 09:06:40,360 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:11:36,019 - django.server - INFO - "GET /admin/core/message/ HTTP/1.1" 200 12586
+2025-08-17 09:11:36,109 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:11:54,484 - django.server - INFO - "POST /admin/core/message/ HTTP/1.1" 200 8715
+2025-08-17 09:11:55,893 - django.server - INFO - "POST /admin/core/message/ HTTP/1.1" 302 0
+2025-08-17 09:11:55,930 - django.server - INFO - "GET /admin/core/message/ HTTP/1.1" 200 9929
+2025-08-17 09:11:56,011 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:11:58,499 - django.server - INFO - "GET /admin/core/property/ HTTP/1.1" 200 16129
+2025-08-17 09:11:58,543 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:12:06,414 - django.server - INFO - "POST /admin/core/property/ HTTP/1.1" 200 9820
+2025-08-17 09:12:08,550 - django.server - INFO - "POST /admin/core/property/ HTTP/1.1" 302 0
+2025-08-17 09:12:08,584 - django.server - INFO - "GET /admin/core/property/ HTTP/1.1" 200 10501
+2025-08-17 09:12:08,659 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:12:10,596 - django.server - INFO - "GET /admin/core/propertyimage/ HTTP/1.1" 200 9410
+2025-08-17 09:12:10,652 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:12:13,328 - django.server - INFO - "GET /admin/core/report/ HTTP/1.1" 200 10817
+2025-08-17 09:12:13,372 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:12:16,643 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 17132
+2025-08-17 09:12:16,692 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:13:42,207 - django.server - INFO - "OPTIONS /api/token/ HTTP/1.1" 200 0
+2025-08-17 09:13:42,213 - core.authentication - INFO - Authentication attempt with data: {'username': 'buyer', 'password': 'buyer123'}
+2025-08-17 09:13:42,773 - core.authentication - INFO - Authentication successful for user: buyer
+2025-08-17 09:13:42,774 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 700
+2025-08-17 09:13:42,821 - django.server - INFO - "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+2025-08-17 09:13:42,877 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 284
+2025-08-17 09:13:47,380 - django.server - INFO - "OPTIONS /api/properties/ HTTP/1.1" 200 0
+2025-08-17 09:13:47,382 - django.server - INFO - "OPTIONS /api/properties/ HTTP/1.1" 200 0
+2025-08-17 09:13:47,397 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:13:47,459 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:16:10,046 - core.authentication - INFO - Authentication attempt with data: {'username': 'seller', 'password': 'seller123'}
+2025-08-17 09:16:10,591 - core.authentication - INFO - Authentication successful for user: seller
+2025-08-17 09:16:10,592 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 698
+2025-08-17 09:16:13,337 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 283
+2025-08-17 09:16:30,110 - core.authentication - INFO - Authentication attempt with data: {'username': 'admin', 'password': 'admin123'}
+2025-08-17 09:16:30,612 - core.authentication - INFO - Authentication successful for user: admin
+2025-08-17 09:16:30,612 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 689
+2025-08-17 09:16:30,625 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 276
+2025-08-17 09:16:33,609 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:16:33,657 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:16:50,450 - core.authentication - INFO - Authentication attempt with data: {'username': 'seller', 'password': 'seller123'}
+2025-08-17 09:16:50,936 - core.authentication - INFO - Authentication successful for user: seller
+2025-08-17 09:16:50,937 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 698
+2025-08-17 09:16:50,951 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 283
+2025-08-17 09:16:53,700 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:16:53,716 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:16:58,339 - django.server - INFO - "OPTIONS /api/bookings/ HTTP/1.1" 200 0
+2025-08-17 09:16:58,340 - django.server - INFO - "OPTIONS /api/bookings/ HTTP/1.1" 200 0
+2025-08-17 09:16:58,359 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:16:58,420 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:16:58,420 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:16:58,475 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:17:24,751 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:17:24,767 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:19:41,247 - django.server - INFO - "POST /api/properties/ HTTP/1.1" 201 730
+2025-08-17 09:19:47,733 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:19:47,751 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:21:08,252 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 09:21:13,065 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:21:13,097 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:21:31,740 - django.server - INFO - "GET /admin/core/property/ HTTP/1.1" 200 12988
+2025-08-17 09:21:31,812 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:22:16,771 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:22:16,808 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:22:16,820 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:22:16,883 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:22:38,682 - core.authentication - INFO - Authentication attempt with data: {'username': 'buyer', 'password': 'buyer123'}
+2025-08-17 09:22:39,184 - core.authentication - INFO - Authentication successful for user: buyer
+2025-08-17 09:22:39,185 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 700
+2025-08-17 09:22:39,201 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 284
+2025-08-17 09:22:46,921 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:22:46,938 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:22:49,780 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:22:49,800 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:23:04,976 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:23:04,989 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:24:52,372 - django.server - INFO - "GET /admin/core/report/ HTTP/1.1" 200 10817
+2025-08-17 09:24:52,447 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:25:07,063 - core.authentication - INFO - Authentication attempt with data: {'username': 'seller', 'password': 'seller123'}
+2025-08-17 09:25:07,571 - core.authentication - INFO - Authentication successful for user: seller
+2025-08-17 09:25:07,572 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 698
+2025-08-17 09:25:07,586 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 283
+2025-08-17 09:26:28,718 - django.server - INFO - "OPTIONS /api/bookings/seller_bookings/ HTTP/1.1" 200 0
+2025-08-17 09:26:28,719 - django.server - INFO - "OPTIONS /api/bookings/seller_bookings/ HTTP/1.1" 200 0
+2025-08-17 09:26:28,745 - django.server - INFO - "GET /api/bookings/seller_bookings/ HTTP/1.1" 200 2
+2025-08-17 09:26:28,806 - django.server - INFO - "GET /api/bookings/seller_bookings/ HTTP/1.1" 200 2
+2025-08-17 09:29:01,583 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:01,601 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:03,085 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:29:03,106 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:03,107 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:29:03,160 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:31,305 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:31,323 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:43,743 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:43,758 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:48,327 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:29:48,353 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:29:48,354 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 09:29:48,405 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 09:30:40,631 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 17132
+2025-08-17 09:30:40,721 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:30:43,277 - django.server - INFO - "GET /admin/core/user/add/ HTTP/1.1" 200 24094
+2025-08-17 09:30:43,316 - django.server - INFO - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2025-08-17 09:30:43,318 - django.server - INFO - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2025-08-17 09:30:43,325 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:30:43,368 - django.server - INFO - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2025-08-17 09:30:43,376 - django.server - INFO - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2025-08-17 09:30:52,585 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 17132
+2025-08-17 09:30:52,650 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:31:14,804 - django.server - INFO - "POST /admin/core/user/ HTTP/1.1" 200 18179
+2025-08-17 09:31:22,446 - django.server - INFO - "POST /admin/core/user/ HTTP/1.1" 302 0
+2025-08-17 09:31:22,462 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 302 0
+2025-08-17 09:31:22,525 - django.server - INFO - "GET /admin/login/?next=/admin/core/user/ HTTP/1.1" 200 4341
+2025-08-17 09:31:22,610 - django.server - INFO - "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2025-08-17 09:31:35,279 - django.server - INFO - "POST /admin/login/?next=/admin/core/user/ HTTP/1.1" 200 4366
+2025-08-17 09:32:43,803 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 09:32:56,564 - django.server - INFO - "POST /admin/login/?next=/admin/core/user/ HTTP/1.1" 302 0
+2025-08-17 09:32:56,682 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12032
+2025-08-17 09:32:56,818 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:33:15,802 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12032
+2025-08-17 09:33:15,849 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:33:19,891 - django.server - INFO - "POST /admin/logout/ HTTP/1.1" 200 3580
+2025-08-17 09:33:27,930 - django.server - INFO - "POST /admin/logout/ HTTP/1.1" 302 0
+2025-08-17 09:33:27,936 - django.server - INFO - "GET /admin/ HTTP/1.1" 302 0
+2025-08-17 09:33:28,031 - django.server - INFO - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4185
+2025-08-17 09:33:38,273 - django.server - INFO - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2025-08-17 09:33:38,304 - django.server - INFO - "GET /admin/ HTTP/1.1" 200 7907
+2025-08-17 09:34:49,054 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12032
+2025-08-17 09:34:49,136 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:34:56,956 - django.server - INFO - "GET /admin/core/user/add/ HTTP/1.1" 200 24094
+2025-08-17 09:34:57,013 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:35:41,956 - django.server - INFO - "POST /admin/core/user/add/ HTTP/1.1" 302 0
+2025-08-17 09:35:42,011 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12688
+2025-08-17 09:35:42,121 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:39:27,848 - django.request - WARNING - Unauthorized: /api/properties/
+2025-08-17 09:39:27,848 - django.server - WARNING - "GET /api/properties/ HTTP/1.1" 401 51
+2025-08-17 09:39:27,866 - django.request - WARNING - Unauthorized: /api/properties/
+2025-08-17 09:39:27,867 - django.server - WARNING - "GET /api/properties/ HTTP/1.1" 401 51
+2025-08-17 09:39:49,908 - core.authentication - INFO - Authentication attempt with data: {'username': 'bin', 'password': '12345'}
+2025-08-17 09:39:49,919 - core.authentication - ERROR - Authentication failed: Invalid password
+2025-08-17 09:39:49,919 - core.authentication - ERROR - Authentication error: Invalid password
+Traceback (most recent call last):
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/core/authentication.py", line 39, in validate
+    raise Exception("Invalid password")
+Exception: Invalid password
+2025-08-17 09:39:50,198 - django.request - ERROR - Internal Server Error: /api/token/
+Traceback (most recent call last):
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/core/authentication.py", line 39, in validate
+    raise Exception("Invalid password")
+Exception: Invalid password
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework_simplejwt/views.py", line 43, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/core/authentication.py", line 68, in validate
+    raise Exception("Authentication failed. Please try again.")
+Exception: Authentication failed. Please try again.
+2025-08-17 09:39:50,200 - django.server - ERROR - "POST /api/token/ HTTP/1.1" 500 120204
+2025-08-17 09:40:15,465 - django.server - INFO - "GET /admin/core/property/ HTTP/1.1" 200 10361
+2025-08-17 09:40:15,578 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:40:20,186 - django.server - INFO - "GET /admin/core/property/ HTTP/1.1" 200 10361
+2025-08-17 09:40:20,237 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:40:22,574 - django.server - INFO - "GET /admin/core/propertyimage/ HTTP/1.1" 200 9410
+2025-08-17 09:40:22,632 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:40:24,354 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12489
+2025-08-17 09:40:24,408 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:40:36,192 - django.server - INFO - "POST /admin/core/user/ HTTP/1.1" 200 8906
+2025-08-17 09:41:01,821 - django.server - INFO - "POST /admin/core/user/ HTTP/1.1" 302 0
+2025-08-17 09:41:01,837 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 302 0
+2025-08-17 09:41:01,895 - django.server - INFO - "GET /admin/login/?next=/admin/core/user/ HTTP/1.1" 200 4340
+2025-08-17 09:46:25,594 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 09:46:30,441 - django.server - INFO - "POST /admin/login/?next=/admin/core/user/ HTTP/1.1" 302 0
+2025-08-17 09:46:30,533 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12032
+2025-08-17 09:46:30,637 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:46:54,471 - core.authentication - INFO - Authentication attempt with data: {'username': 'abdul', 'password': '12345'}
+2025-08-17 09:46:55,000 - core.authentication - INFO - Authentication successful for user: abdul
+2025-08-17 09:46:55,001 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 703
+2025-08-17 09:46:55,016 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 292
+2025-08-17 09:47:16,357 - django.server - INFO - "GET /admin/core/user/add/ HTTP/1.1" 200 24094
+2025-08-17 09:47:16,420 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:47:53,944 - django.server - INFO - "POST /admin/core/user/add/ HTTP/1.1" 302 0
+2025-08-17 09:47:53,992 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 12686
+2025-08-17 09:47:54,110 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 09:48:11,763 - core.authentication - INFO - Authentication attempt with data: {'username': 'bin', 'password': '12345'}
+2025-08-17 09:48:11,775 - core.authentication - ERROR - Authentication failed: Invalid password
+2025-08-17 09:48:11,776 - core.authentication - ERROR - Authentication error: Invalid password
+Traceback (most recent call last):
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/core/authentication.py", line 39, in validate
+    raise Exception("Invalid password")
+Exception: Invalid password
+2025-08-17 09:48:11,826 - django.request - ERROR - Internal Server Error: /api/token/
+Traceback (most recent call last):
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/core/authentication.py", line 39, in validate
+    raise Exception("Invalid password")
+Exception: Invalid password
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework_simplejwt/views.py", line 43, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/core/authentication.py", line 68, in validate
+    raise Exception("Authentication failed. Please try again.")
+Exception: Authentication failed. Please try again.
+2025-08-17 09:48:11,828 - django.server - ERROR - "POST /api/token/ HTTP/1.1" 500 120204
+2025-08-17 09:53:06,416 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 09:53:19,299 - core.authentication - INFO - Authentication attempt with data: {'username': 'bin', 'password': '12345'}
+2025-08-17 09:53:19,809 - core.authentication - INFO - Authentication successful for user: bin
+2025-08-17 09:53:19,810 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 682
+2025-08-17 09:53:19,828 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 09:57:42,670 - django.server - INFO - "OPTIONS /api/users/register/ HTTP/1.1" 200 0
+2025-08-17 09:57:42,718 - django.request - WARNING - Not Found: /api/users/register/
+2025-08-17 09:57:42,719 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 404 13148
+2025-08-17 10:01:04,912 - django.request - WARNING - Not Found: /api/users/register/
+2025-08-17 10:01:04,912 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 404 13148
+2025-08-17 10:07:54,225 - django.utils.autoreload - INFO - /home/binos/Documents/abdulWAHID/both_front_back/udalali_back/udigi_udaga_backend/urls.py changed, reloading.
+2025-08-17 10:07:56,096 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:09:55,876 - core.authentication - INFO - Authentication attempt with data: {'username': 'bin', 'password': '12345'}
+2025-08-17 10:09:56,428 - core.authentication - INFO - Authentication successful for user: bin
+2025-08-17 10:09:56,430 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 682
+2025-08-17 10:09:56,447 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 10:10:00,293 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:10:00,312 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:10:04,915 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:10:04,936 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:11:03,804 - django.utils.autoreload - INFO - /home/binos/Documents/abdulWAHID/both_front_back/udalali_back/udigi_udaga_backend/settings.py changed, reloading.
+2025-08-17 10:11:04,723 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:11:32,463 - django.utils.autoreload - INFO - /home/binos/Documents/abdulWAHID/both_front_back/udalali_back/udigi_udaga_backend/settings.py changed, reloading.
+2025-08-17 10:30:18,767 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:30:26,321 - django.server - INFO - "GET /admin/core/user/add/ HTTP/1.1" 200 24095
+2025-08-17 10:30:26,446 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:32:22,668 - django.request - WARNING - Bad Request: /api/users/register/
+2025-08-17 10:32:22,668 - django.server - WARNING - "POST /api/users/register/ HTTP/1.1" 400 48
+2025-08-17 10:32:41,571 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 201 119
+2025-08-17 10:38:38,831 - django.server - INFO - "POST /api/users/register/ HTTP/1.1" 201 121
+2025-08-17 10:40:02,622 - core.authentication - INFO - Authentication attempt with data: {'username': 'bin', 'password': '12345'}
+2025-08-17 10:40:03,164 - core.authentication - INFO - Authentication successful for user: bin
+2025-08-17 10:40:03,165 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 682
+2025-08-17 10:40:03,182 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 10:41:01,972 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:42:38,602 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:42:40,204 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 13880
+2025-08-17 10:42:40,278 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:43:08,045 - core.authentication - INFO - Authentication attempt with data: {'username': 'ban', 'password': '12345'}
+2025-08-17 10:43:08,604 - core.authentication - INFO - Authentication successful for user: ban
+2025-08-17 10:43:08,605 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 694
+2025-08-17 10:43:08,619 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 258
+2025-08-17 10:43:21,362 - django.server - INFO - "GET /admin/core/user/add/ HTTP/1.1" 200 24095
+2025-08-17 10:43:21,415 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:44:01,703 - django.server - INFO - "POST /admin/core/user/add/ HTTP/1.1" 302 0
+2025-08-17 10:44:01,734 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14536
+2025-08-17 10:44:01,847 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:44:24,623 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 10:44:24,661 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:45:16,854 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:45:18,452 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 10:45:18,516 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:45:33,920 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 10:45:34,586 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 10:45:34,587 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 10:45:34,602 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 10:45:45,193 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:45:45,211 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:45:56,709 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:45:56,730 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:46:07,376 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 10:46:07,394 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 10:46:07,403 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:46:07,461 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:49:02,530 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 10:50:24,466 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 10:50:24,487 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 10:50:24,663 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:50:24,690 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:50:26,453 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 10:50:26,501 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 10:51:54,492 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 10:51:55,018 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 10:51:55,019 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 10:51:55,033 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 10:52:46,593 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:52:46,612 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:54:44,159 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:54:44,179 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 52
+2025-08-17 10:56:53,466 - django.server - INFO - "POST /api/properties/ HTTP/1.1" 201 645
+2025-08-17 10:57:10,441 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 10:57:10,466 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 10:57:32,393 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 10:57:32,934 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 10:57:32,936 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 10:57:32,950 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 10:57:37,019 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 10:57:37,039 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 10:57:37,054 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 10:57:37,119 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 11:15:57,485 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 11:16:43,888 - django.request - ERROR - Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/users/views.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/fields.py", line 551, in run_validators
+    validator(value, self)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/validators.py", line 84, in __call__
+    queryset = self.filter_queryset(value, queryset, field_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/validators.py", line 65, in filter_queryset
+    return qs_filter(queryset, **filter_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/validators.py", line 41, in qs_filter
+    return queryset.filter(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'phone_number' into field. Choices are: bookings, created_at, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, is_verified, last_login, last_name, logentry, password, phone, properties, received_messages, reports_against, reports_resolved, reports_submitted, sent_messages, updated_at, user_permissions, user_type, username
+2025-08-17 11:16:43,894 - django.server - ERROR - "POST /api/users/register/ HTTP/1.1" 500 198099
+2025-08-17 11:37:19,915 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 11:37:41,990 - django.request - WARNING - Not Found: /
+2025-08-17 11:37:41,992 - django.server - WARNING - "GET / HTTP/1.1" 404 3327
+2025-08-17 11:37:47,279 - django.server - INFO - "GET /admin/ HTTP/1.1" 200 8510
+2025-08-17 11:37:55,617 - django.request - ERROR - Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/Documents/abdulWAHID/both_front_back/udalali_back/users/views.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/fields.py", line 757, in run_validation
+    return super().run_validation(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/fields.py", line 539, in run_validation
+    self.run_validators(value)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/fields.py", line 551, in run_validators
+    validator(value, self)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/validators.py", line 84, in __call__
+    queryset = self.filter_queryset(value, queryset, field_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/validators.py", line 65, in filter_queryset
+    return qs_filter(queryset, **filter_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/rest_framework/validators.py", line 41, in qs_filter
+    return queryset.filter(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/binos/anaconda3/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'phone_number' into field. Choices are: bookings, created_at, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, is_verified, last_login, last_name, logentry, password, phone, properties, received_messages, reports_against, reports_resolved, reports_submitted, sent_messages, updated_at, user_permissions, user_type, username
+2025-08-17 11:37:55,623 - django.server - ERROR - "POST /api/users/register/ HTTP/1.1" 500 198099
+2025-08-17 11:42:37,530 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 11:42:45,264 - django.server - INFO - "OPTIONS /api/bookings/ HTTP/1.1" 200 0
+2025-08-17 11:42:45,265 - django.server - INFO - "OPTIONS /api/bookings/ HTTP/1.1" 200 0
+2025-08-17 11:42:45,371 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 11:42:45,447 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 11:42:45,475 - django.server - INFO - "OPTIONS /api/properties/ HTTP/1.1" 200 0
+2025-08-17 11:42:45,491 - django.server - INFO - "OPTIONS /api/properties/ HTTP/1.1" 200 0
+2025-08-17 11:42:45,556 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 11:42:45,631 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 11:42:57,595 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 11:42:57,621 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 11:42:57,679 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 11:42:57,747 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 11:53:39,797 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 11:53:39,814 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 11:53:39,865 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 11:53:39,944 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:00:25,236 - django.request - WARNING - Unauthorized: /api/bookings/
+2025-08-17 12:00:25,238 - django.server - WARNING - "GET /api/bookings/ HTTP/1.1" 401 183
+2025-08-17 12:00:25,247 - django.request - WARNING - Unauthorized: /api/bookings/
+2025-08-17 12:00:25,248 - django.server - WARNING - "GET /api/bookings/ HTTP/1.1" 401 183
+2025-08-17 12:00:51,679 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 12:00:51,782 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 12:00:54,699 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 12:00:54,760 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 12:01:22,847 - django.server - INFO - "OPTIONS /api/token/ HTTP/1.1" 200 0
+2025-08-17 12:01:22,853 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 12:01:23,470 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 12:01:23,472 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 12:01:23,523 - django.server - INFO - "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+2025-08-17 12:01:23,578 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 12:01:28,756 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:01:28,784 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:01:58,340 - core.authentication - INFO - Authentication attempt with data: {'username': 'ban', 'password': '12345'}
+2025-08-17 12:01:58,850 - core.authentication - INFO - Authentication successful for user: ban
+2025-08-17 12:01:58,851 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 694
+2025-08-17 12:01:58,864 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 258
+2025-08-17 12:02:02,694 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:02:02,732 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:02:11,451 - django.server - INFO - "OPTIONS /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 0
+2025-08-17 12:02:11,452 - django.server - INFO - "OPTIONS /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 0
+2025-08-17 12:02:11,474 - django.server - INFO - "GET /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 52
+2025-08-17 12:02:11,544 - django.server - INFO - "GET /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 52
+2025-08-17 12:02:33,135 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 12:02:33,646 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 12:02:33,647 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 12:02:33,661 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 12:02:37,648 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 12:02:37,671 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 52
+2025-08-17 12:02:37,684 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:02:37,751 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:04:26,139 - core.authentication - INFO - Authentication attempt with data: {'username': 'ban', 'password': '12345'}
+2025-08-17 12:04:26,655 - core.authentication - INFO - Authentication successful for user: ban
+2025-08-17 12:04:26,656 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 694
+2025-08-17 12:04:26,669 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 258
+2025-08-17 12:04:31,125 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:04:31,162 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:04:39,214 - django.server - INFO - "GET /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 52
+2025-08-17 12:04:39,236 - django.server - INFO - "GET /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 52
+2025-08-17 12:04:47,481 - django.server - INFO - "OPTIONS /api/properties/20/availability/?start_date=2025-08-17&end_date=2025-08-18 HTTP/1.1" 200 0
+2025-08-17 12:04:47,506 - django.server - INFO - "GET /api/properties/20/availability/?start_date=2025-08-17&end_date=2025-08-18 HTTP/1.1" 200 75
+2025-08-17 12:05:05,884 - django.server - INFO - "GET /api/properties/20/availability/?start_date=2025-08-17&end_date=2025-08-18 HTTP/1.1" 200 75
+2025-08-17 12:05:05,915 - django.server - INFO - "POST /api/bookings/ HTTP/1.1" 201 295
+2025-08-17 12:05:21,081 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 12:05:21,664 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 12:05:21,665 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 12:05:21,678 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 12:05:25,266 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:05:25,298 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:05:25,320 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:05:25,387 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:05:30,071 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:05:30,090 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:05:30,140 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:05:30,220 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:05:59,692 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 12:05:59,814 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 12:06:02,317 - django.server - INFO - "GET /admin/core/booking/ HTTP/1.1" 200 13647
+2025-08-17 12:06:02,372 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 12:06:08,157 - django.server - INFO - "GET /admin/core/booking/7/change/ HTTP/1.1" 200 17772
+2025-08-17 12:06:08,229 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 12:09:15,651 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:09:15,678 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:09:15,776 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:09:15,818 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:09:50,533 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 12:12:37,799 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:12:37,827 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:12:37,878 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:12:37,999 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:15:57,940 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 12:16:04,731 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:16:04,759 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:16:04,809 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:16:04,876 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:24:08,589 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:24:08,617 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:24:08,706 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:24:08,795 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:25:25,315 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 12:25:48,539 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:25:48,616 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:25:48,703 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:25:48,905 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:28:42,994 - django.server - INFO - "GET /admin/core/booking/7/change/ HTTP/1.1" 200 17772
+2025-08-17 12:28:43,258 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 12:29:36,058 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:29:36,084 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:29:36,141 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:29:36,248 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:47:15,291 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:47:15,331 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:47:15,413 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:47:15,504 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:51:01,225 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:51:01,254 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 12:51:01,328 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 12:51:01,409 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:23:14,892 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-08-17 13:23:36,676 - django.request - WARNING - Unauthorized: /api/bookings/
+2025-08-17 13:23:36,677 - django.server - WARNING - "GET /api/bookings/ HTTP/1.1" 401 183
+2025-08-17 13:23:36,683 - django.request - WARNING - Unauthorized: /api/bookings/
+2025-08-17 13:23:36,684 - django.server - WARNING - "GET /api/bookings/ HTTP/1.1" 401 183
+2025-08-17 13:23:55,856 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 13:23:56,407 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 13:23:56,408 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 13:23:56,424 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 13:24:01,044 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:24:01,075 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:24:20,671 - django.server - INFO - "GET /admin/core/user/ HTTP/1.1" 200 14336
+2025-08-17 13:24:20,765 - django.server - INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-08-17 13:24:32,758 - core.authentication - INFO - Authentication attempt with data: {'username': 'ban', 'password': '12345'}
+2025-08-17 13:24:33,298 - core.authentication - INFO - Authentication successful for user: ban
+2025-08-17 13:24:33,299 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 694
+2025-08-17 13:24:33,313 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 258
+2025-08-17 13:24:37,393 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:24:37,421 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:24:43,320 - django.server - INFO - "GET /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 52
+2025-08-17 13:24:43,340 - django.server - INFO - "GET /api/bookings/?property=20&status=CONFIRMED HTTP/1.1" 200 52
+2025-08-17 13:24:51,896 - django.request - WARNING - Bad Request: /api/properties/20/availability/
+2025-08-17 13:24:51,897 - django.server - WARNING - "GET /api/properties/20/availability/?start_date=2025-08-17&end_date=2025-08-18 HTTP/1.1" 400 80
+2025-08-17 13:25:46,933 - core.authentication - INFO - Authentication attempt with data: {'username': 'none', 'password': '12345'}
+2025-08-17 13:25:47,445 - core.authentication - INFO - Authentication successful for user: none
+2025-08-17 13:25:47,446 - django.server - INFO - "POST /api/token/ HTTP/1.1" 200 688
+2025-08-17 13:25:47,462 - django.server - INFO - "GET /api/users/me/ HTTP/1.1" 200 265
+2025-08-17 13:25:52,066 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 13:25:52,095 - django.server - INFO - "GET /api/bookings/ HTTP/1.1" 200 347
+2025-08-17 13:25:52,108 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:25:52,171 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:26:06,371 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:26:06,403 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 697
+2025-08-17 13:27:38,238 - django.server - INFO - "POST /api/properties/ HTTP/1.1" 201 657
+2025-08-17 13:27:43,350 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 1355
+2025-08-17 13:27:43,385 - django.server - INFO - "GET /api/properties/ HTTP/1.1" 200 1355
